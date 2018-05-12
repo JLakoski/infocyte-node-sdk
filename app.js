@@ -86,7 +86,16 @@ async function scanTargetByName(targetName){
 	return res;
 }
 
-//get host lists
-
+//get all hosts in a target list
 
 //get scans & scan results
+
+//get scans in a target list
+
+//get results of a specific type for a scan
+
+//get last 30 for a target group
+
+//create an empty scan to which you would add offline scans
+
+//upload offline scans to a target group
