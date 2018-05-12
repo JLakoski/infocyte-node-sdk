@@ -2,15 +2,15 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 // TODO: this is insecure; https://github.com/axios/axios/issues/535
 
 const axiosBase = require ('axios');
-
-const username = "infocyte";
-const password = "hunt";
-var session;
-
 const axios = axiosBase.create({
   baseURL: "https://172.16.33.18/api/",
 });
 
+// Authentication
+
+const username = "infocyte";
+const password = "hunt";
+var session;
 axios.interceptors.request.use(
 	config => {
 		if(session){
@@ -31,11 +31,7 @@ async function auth(){
 	}
 }
 
-
-
-
-
-
+//enumerate and scan
 
 async function getTargets(){
 	const res = await axios.get('/targets/');
@@ -90,17 +86,7 @@ async function scanTargetByName(targetName){
 	return res;
 }
 
-async function enumerateAndScanTarget(){
-
-}
+//get host lists
 
 
-
-
-
-async function initiate(){
-	await auth();
-	const tar = await scanTargetByName("tons");
-	console.log(tar);
-}
-initiate();
+//get scans & scan results
