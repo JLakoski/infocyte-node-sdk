@@ -1,0 +1,14 @@
+{
+  "name": "infocyte-sdk",
+  "version": "0.1.0",
+  "description": "SDK for use when integrating to the infocyte hunt api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Lakoski",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
